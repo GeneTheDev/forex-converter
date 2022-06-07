@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Converter</title>
+</head>
+
+<body>
+    <style>
+        html, body { background-color: #2A2B2A; font-family: Helvetica; }
+        div { -webkit-box-shadow: -5px 2px 42px -4px rgba(0,0,0,0.75); -moz-box-shadow: -5px 2px 42px -4px rgba(0,0,0,0.75); box-shadow: -5px 2px 42px -4px rgba(0,0,0,0.75); }
+        .converter { position: relative; display: block; margin: 50px auto; background: #E5446D; color: #fff; padding: 40px 20px; border-radius: 10px; width: 325px; }
+        .converter #base, #to { text-align: center; display: inline-block; font-size: 18px; padding-top: 15px; }
+        .converter .item { width: 45%; }
+        .converter #amount, #calculation { display: inline-block; text-align: center; font-size: 34px; vertical-align: sub; }
+        .converter #last_update { position: absolute; right: 10px; bottom: 7px; font-size: 11px; }
+        .currency-information { background-color: #FF8966; width: 325px; color: #fff; min-height: 100px; margin: 0 auto; padding: 20px; border-radius: 10px;}
+        .currency-information h4 { font-size: 28px; width: 100%; text-align: center; margin: 0; padding-bottom: 10px;}
+        .currency-information span { display: block; padding: 5px 0; text-align: center; }
+        </style>
+         
+        <div class="converter">
+         
+        <span class="item" id="amount">{{amount}}</span>
+        <span class="item">→</span>
+        <span class="item" id="calculation">{{ calculation }}</span>
+         
+        <span class="item" id="base">{{base}}</span>
+        <span class="item">→</span>
+        <span class="item" id="to">{{to}}</span>
+        <span id="last_update">{{last_update}}</span>
+        </div>
+         
+        <div class="currency-information">
+        <h4> {{ base + to }} </h4>
+        <span>1 {{ base }} = {{ value }} {{ to }} </span>
+        <span><b>Daily Difference:</b> {{difference}}</span>
+        <span><b>Daily Change:</b> {{change}}%</span>
+        </div>
+</body>
+
+</html>
